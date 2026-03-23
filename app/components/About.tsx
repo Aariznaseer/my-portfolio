@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 const meta = [
   { label: "Name", value: "Aariz Naseer", gold: false },
@@ -74,23 +75,20 @@ export default function About() {
             </span>
             {/* Avatar */}
             <div
-              className="w-full aspect-square flex items-center justify-center mb-6 relative overflow-hidden"
-              style={{
-                background:
-                  "linear-gradient(135deg, var(--bg3), var(--bg2))",
-                border: "1px solid var(--border)",
-              }}
-            >
-              <span
-                className="text-[5rem] font-light italic opacity-40"
-                style={{
-                  fontFamily: "var(--ff-display)",
-                  color: "var(--gold)",
-                }}
-              >
-                AN
-              </span>
-            </div>
+  className="w-full mb-6 relative overflow-hidden"
+  style={{
+    border: "1px solid var(--border)",
+    background: "var(--bg2)",
+  }}
+>
+  <Image
+    src="/profile.jpg"
+    alt="Aariz"
+    width={500}
+    height={500}
+    className="w-full h-auto"
+  />
+</div>
             {/* Meta rows */}
             {meta.map((m) => (
               <div
